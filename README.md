@@ -1,4 +1,6 @@
 # LeetCode Problems
 
-- [Merge linked lists](src/main/java/org/leetcode/MergeLinkedLists.java)
-- [Common characters in two strings](src/main/java/org/leetcode/CommonCharacters.java)
+- [Merge Linked Lists](src/main/java/code/MergeLinkedLists.java)
+- [Common Characters in Two Strings](src/main/java/code/CommonCharacters.java)
+- [Find Pivot Index](src/main/java/code/FindPivotIndex.java)
+- [Longest Common Prefix](src/main/java/code/LongestCommonPrefix.java)
