@@ -6,3 +6,4 @@
 - [Longest Common Prefix](src/main/java/code/LongestCommonPrefix.java)
 - [Remove Duplicates](src/main/java/code/RemoveDuplicates.java)
 - [Isomorphic Strings](src/main/java/code/IsomorphicStrings.java)
+- [Search Insert Position](src/main/java/code/SearchInsertPosition.java)

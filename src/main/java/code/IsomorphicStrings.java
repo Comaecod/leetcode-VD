@@ -1,36 +1,37 @@
 package code;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class IsomorphicStrings {
 
     public static void main(String[] args) {
-        IsomorphicStrings c = new IsomorphicStrings();
-        System.out.println(c.isIsomer("add", "egg")); // {d: 1, h: 1, e: 2, r: 1, a: 1, j: 1}
+        System.out.println(isIsomer("badc", "baba"));
     }
 
-    public String isIsomer(String a, String b) {
+    public static boolean isIsomer(String s, String t) {
 
-        /*
-         * aadd egeg
-         * {a:2 d:2}
-         *
-         * while(keys in map.keyset)
-         *   replace key in first map with key in second map
-         *
-         *
-         * end of loop
-         * check if strings are equal
-         *
-         * {e:3, g:2}
-         *
-         * replaceAll(s1.('aa'), ('e'))
-         * eedd egeg
-         * eedd egeg
-         * */
-//    }
-//    a,d
-//    for(keys in map.keyset()){
-//
-//    }
-        return "";
+        if (s.length() != t.length()) return false;
+
+        Map<Character, Character> mapStoT = new HashMap<>();
+        Set<Character> usedT = new HashSet<>(); // [b,a,d,c]
+
+        for (int i = 0; i < s.length(); i++) {
+            char sChar = s.charAt(i);
+            char tChar = t.charAt(i);
+            if (mapStoT.containsKey(sChar)) {
+                if (!mapStoT.get(sChar).equals(tChar)) {
+                    return false;
+                }
+            } else if (usedT.contains(tChar)) {
+                return false;
+            } else {
+                mapStoT.put(sChar, tChar);
+                usedT.add(tChar);
+            }
+        }
+        return true;
     }
 }
